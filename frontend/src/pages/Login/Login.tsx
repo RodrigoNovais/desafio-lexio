@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 
+import Button from '../../components/Button';
 import Input from '../../components/Input';
 
 import LoginCSS from './Login.module.css';
@@ -44,7 +45,7 @@ const Login: React.FC = () => {
                             </button>
                         </Input>
 
-                        <button disabled={disabled} type="submit">Login</button>
+                        <Button disabled={disabled} type="submit">Login</Button>
                     </div>
                 </fieldset>
             </form>
