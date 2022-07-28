@@ -1,0 +1,143 @@
+.login-container {
+    width: 100%;
+    height: 100%;
+
+    background-color: #FCFCFC;
+    padding: 4rem;
+
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.login-container .banner {
+    border-radius: 1.6rem;
+    height: calc(100vh - 8rem);
+}
+
+.login-container fieldset {
+    text-align: start;
+    border: 0;
+}
+
+.login-container legend {
+    color: #28303B;
+    font-size: 3.6rem;
+    font-weight: bold;
+
+    padding: 7rem 0 3rem 0;
+}
+
+.login-container .subtitle {
+    font-size: 1.8rem;
+    color: #6C7892;
+
+    padding-bottom: 9rem;
+}
+
+.login-container .emphasis { font-weight: bold; }
+
+.login-container .fields {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3rem;
+}
+
+/* INPUT */
+.login-container .input-block {
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.login-container .input-block label {
+    font-size: 1.4rem;
+
+    position: absolute;
+
+    top: 50%;
+    left: 1.8rem;
+    transform: translateY(-50%);
+
+    transition: all .2s linear;
+}
+
+.login-container .input-block input {
+    width: 100%;
+    height: 5.6rem;
+
+    background-color: #F0F0F0;
+
+    padding: 0 1.6rem;
+    border: 1px solid #F0F0F0;
+    border-radius: 0.8rem;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.login-container .input-block input[disabled] {
+    background: var(--color-line-in-white);
+}
+
+.login-container .input-block input:not(:placeholder-shown) + label,
+.login-container .input-block:focus-within label {
+    top: 20%;
+
+    font-size: 1.2rem;
+    color: var(--color-text-complement);
+}
+
+.login-container .input-block ::placeholder { opacity: 0; }
+
+.login-container .input-block .toggle {
+    position: absolute;
+
+    top: 50%;
+    right: 1.8rem;
+    transform: translateY(-50%);
+}
+
+.login-container .input-block .toggle img {
+    width: 80%;
+    margin: auto;
+}
+
+/* BUTTON */
+.login-container button[type='submit'] {
+    align-self: flex-end;
+
+    width: 16rem;
+    padding: 1rem 1.6rem;
+    gap: 1.2rem;
+
+    background-color: #FEAD00;
+    color: #37474F;
+
+    box-shadow: 0 .8rem 1.6rem 0 #1111111A;
+    border: none;
+    border-radius: 1.2rem;
+
+    font-weight: bold;
+    font-size: 1.6rem;
+    letter-spacing: 0.075rem;
+
+    transition: background-color 200ms;
+}
+
+.login-container button[type='submit']:not(:disabled):hover {
+    background-color: #CC8B00;
+    color: #FCFCFC;
+}
+
+.login-container button[type='submit']:not(:disabled):active {
+    background-color: #996800;
+    color: #FCFCFC;
+}
+
+.login-container button[type='submit']:disabled {
+    background-color: #d6d8de;
+    cursor: not-allowed;
+}
