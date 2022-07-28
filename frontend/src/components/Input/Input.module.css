@@ -43,4 +43,8 @@
     color: var(--color-text-complement);
 }
 
-.input-block ::placeholder { opacity: 0; }
+.input-stacked ::placeholder {
+    color: #A7AEBE;
+    transition: inherit;
+    opacity: 0;
+}
