@@ -44,55 +44,7 @@
     gap: 3rem;
 }
 
-/* INPUT */
-.login-container .input-block {
-    position: relative;
-
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.login-container .input-block label {
-    font-size: 1.4rem;
-
-    position: absolute;
-
-    top: 50%;
-    left: 1.8rem;
-    transform: translateY(-50%);
-
-    transition: all .2s linear;
-}
-
-.login-container .input-block input {
-    width: 100%;
-    height: 5.6rem;
-
-    background-color: #F0F0F0;
-
-    padding: 0 1.6rem;
-    border: 1px solid #F0F0F0;
-    border-radius: 0.8rem;
-
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
-.login-container .input-block input[disabled] {
-    background: var(--color-line-in-white);
-}
-
-.login-container .input-block input:not(:placeholder-shown) + label,
-.login-container .input-block:focus-within label {
-    top: 20%;
-
-    font-size: 1.2rem;
-    color: var(--color-text-complement);
-}
-
-.login-container .input-block ::placeholder { opacity: 0; }
-
-.login-container .input-block .toggle {
+.login-container .toggle {
     position: absolute;
 
     top: 50%;
@@ -100,7 +52,7 @@
     transform: translateY(-50%);
 }
 
-.login-container .input-block .toggle img {
+.login-container .toggle img {
     width: 80%;
     margin: auto;
 }

@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import Input from '../../components/Input';
+
 import LoginCSS from './Login.module.css';
 
 const Login: React.FC = () => {
@@ -29,19 +31,18 @@ const Login: React.FC = () => {
                     </p>
 
                     <div className={LoginCSS['fields']}>
-                        <div className={LoginCSS['input-block']}>
-                            <input type='email' name='email' placeholder='Email' autoComplete='email' maxLength={255} value={email} onChange={e => setEmail(e.target.value)} />
-                            <label htmlFor='email'>Email</label>
-                        </div>
+                        <Input type='email' name='email' label='email' placeholder='Email' autoComplete='email'
+                            maxLength={255} value={email} onChange={e => setEmail(e.target.value)}/>
 
-                        <div className={LoginCSS['input-block']}>
-                            <input type={togglePassword ? 'password' : 'text'} name='password' placeholder='Senha' autoComplete='current-password' maxLength={255} value={password} onChange={e => setPassword(e.target.value)} />
-                            <label htmlFor='password'>Password</label>
+                        <Input type={togglePassword ? 'password' : 'text'} name='password' label='Password'
+                            placeholder='Senha' autoComplete='current-password'
+                            maxLength={255} value={password} onChange={e => setPassword(e.target.value)}>
 
                             <button className={LoginCSS['toggle']} title='Mostrar Senha' onClick={() => setTogglePassword(toggle => !toggle)}>
-                                <img src={`/assets/images/icons/${togglePassword ? 'eye' : 'eye-closed'}.svg`} alt={togglePassword ? 'Mostrar senha' : 'Ocultar senha'} />
+                                <img src={`/assets/images/icons/${togglePassword ? 'eye' : 'eye-closed'}.svg`}
+                                    alt={togglePassword ? 'Mostrar senha' : 'Ocultar senha'} />
                             </button>
-                        </div>
+                        </Input>
 
                         <button disabled={disabled} type="submit">Login</button>
                     </div>
