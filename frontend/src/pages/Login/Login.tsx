@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { KeyboardEventHandler, useEffect, useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -22,14 +22,24 @@ const Login: React.FC = () => {
 
     useEffect(() => setDisabled(!email || !password), [email, password]);
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-
+    const loginAttempt = () => {
         if (loading) return;
 
         signIn({ email, password })
             .then(() => navigate({ pathname: '/' }));
+    }
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        loginAttempt();
     };
+
+    const handlePressEnter: KeyboardEventHandler<HTMLInputElement> = (e) => {
+        if (e.key !== 'Enter') return;
+
+        e.preventDefault();
+        loginAttempt();
+    }
 
     const togglePasswordVisibility = () => setTogglePassword(toggle => !toggle);
 
@@ -51,7 +61,7 @@ const Login: React.FC = () => {
                             maxLength={255} value={email} onChange={e => setEmail(e.target.value)}/>
 
                         <Input type={togglePassword ? 'password' : 'text'} name='password' label='Senha'
-                            placeholder='Senha' autoComplete='current-password'
+                            placeholder='Senha' autoComplete='current-password' onKeyDown={handlePressEnter}
                             maxLength={255} value={password} onChange={e => setPassword(e.target.value)}>
 
                             <button className={LoginCSS['toggle']} title='Mostrar Senha' onClick={togglePasswordVisibility}>
