@@ -1,0 +1,21 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #28303B;
+
+    padding: 1.4rem 6rem;
+}
+
+.navigation button {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+
+    color: #FCFCFC;
+    background-color: transparent;
+}
