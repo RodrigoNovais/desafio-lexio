@@ -47,10 +47,10 @@ const Login: React.FC = () => {
                     </p>
 
                     <div className={LoginCSS['fields']}>
-                        <Input type='email' name='email' label='email' placeholder='Email' autoComplete='email'
+                        <Input type='email' name='email' label='Email' placeholder='Email' autoComplete='email'
                             maxLength={255} value={email} onChange={e => setEmail(e.target.value)}/>
 
-                        <Input type={togglePassword ? 'password' : 'text'} name='password' label='Password'
+                        <Input type={togglePassword ? 'password' : 'text'} name='password' label='Senha'
                             placeholder='Senha' autoComplete='current-password'
                             maxLength={255} value={password} onChange={e => setPassword(e.target.value)}>
 

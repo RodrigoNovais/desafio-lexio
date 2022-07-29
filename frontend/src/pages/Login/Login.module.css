@@ -44,6 +44,8 @@
     gap: 3rem;
 }
 
+.login-container input::placeholder { color: transparent; }
+
 .login-container .toggle {
     position: absolute;
 

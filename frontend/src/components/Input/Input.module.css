@@ -31,16 +31,10 @@
     font-weight: bold;
 }
 
-.input-block input[disabled] {
-    background: var(--color-line-in-white);
-}
-
 .input-block input:not(:placeholder-shown) + label,
 .input-block:focus-within label {
     top: 20%;
-
     font-size: 1.2rem;
-    color: var(--color-text-complement);
 }
 
 .input-stacked ::placeholder {
