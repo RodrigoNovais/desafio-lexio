@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import Avatar from '../../components/Avatar';
 import Badge, { Status } from '../../components/Badge';
+import Heading from '../../components/Heading';
 import Input from '../../components/Input';
 import Navigation from '../../components/Navigation';
 
@@ -32,15 +33,7 @@ const Dashboard: React.FC = () => {
             <Navigation />
 
             <main>
-                <header className={DashboardCSS['heading']}>
-                    <p>Lexio Teste</p>
-
-                    <div>
-                        <img src='/assets/images/icons/calendar.svg' />
-                        <p>24</p>
-                        <span>Eventos<br /> da semana</span>
-                    </div>
-                </header>
+                <Heading />
 
                 <div className={DashboardCSS['list']}>
                     <Input className={DashboardCSS['search']} type='search' name='search' placeholder='Buscar documento' autoComplete='on'
