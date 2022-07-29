@@ -1,20 +1,34 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Avatar from '../../components/Avatar';
 import Badge, { Status } from '../../components/Badge';
 import Input from '../../components/Input';
 
+import { useAuth } from '../../contexts/auth';
+
 import DashboardCSS from './Dashboard.module.css';
 
 const Dashboard: React.FC = () => {
+    const { signOut } = useAuth();
+
+    const navigate = useNavigate();
+
     const [search, setSearch] = useState<string>('');
+
+    const handleSignOut: React.MouseEventHandler<HTMLButtonElement> = async (e) => {
+        e.preventDefault();
+
+        signOut()
+            .then(() => navigate({ pathname: '/login' }));
+    };
 
     return (
         <div className={DashboardCSS['dashboard-container']}>
             <header className={DashboardCSS['navigation']}>
                 <img src='/assets/images/lexio-logo.svg' alt='Logo da Lexio' />
 
-                <button type='button'>
+                <button type='button' onClick={handleSignOut}>
                     <img src='/assets/images/icons/exit.svg' />
                     Sair
                 </button>

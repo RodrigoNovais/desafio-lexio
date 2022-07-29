@@ -1,10 +1,16 @@
-import Dashboard from './pages/Dashboard';
+import Routes from './routes';
+
+import { AuthProvider } from './contexts/auth';
 
 import './styles/reset.css';
 import './styles/styles.css';
 
 const App: React.FC = () => {
-    return (<Dashboard />);
+    return (
+        <AuthProvider>
+            <Routes />
+        </AuthProvider>
+    );
 };
 
 export default App;
