@@ -1,0 +1,29 @@
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+
+    padding: 0.6rem 1.6rem;
+    gap: 0.6rem;
+
+    color: #FCFCFC;
+    border-radius: 0.8rem;
+}
+
+.badge span {
+    font-size: 3rem;
+    line-height: 0;
+}
+
+.badge p {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.badge.archived { background-color: #374f66; }
+.badge.signed { background-color: #3598dc; }
+.badge.awaiting-approval { background-color: #f5650c; }
+.badge.awaiting-signature { background-color: #0ecdd9; }
+.badge.under-review { background-color: #f1c40f; }

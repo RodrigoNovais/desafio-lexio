@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-import Input from '../../components/Input/Input';
+import Badge, { Status } from '../../components/Badge';
+import Input from '../../components/Input';
 
 import DashboardCSS from './Dashboard.module.css';
 
@@ -45,9 +46,8 @@ const Dashboard: React.FC = () => {
                         </div>
 
                         <div className={DashboardCSS['status']}>
-                            <div className={`${DashboardCSS['badge']} ${DashboardCSS['archived']}`}>
-                                <span>·</span>
-                                <p>arquivado</p>
+                            <div className={DashboardCSS['status']}>
+                                <Badge status='arquivado' />
                             </div>
                         </div>
 
@@ -79,3 +79,4 @@ const Dashboard: React.FC = () => {
     )
 };
 
+export default Dashboard;
