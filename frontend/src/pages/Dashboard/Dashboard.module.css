@@ -104,9 +104,9 @@
 
 /* ITEM */
 .dashboard-container .item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: minmax(20rem, 1fr) 16rem 2fr 17.4rem 7rem;
+
     gap: 6rem;
 
     background-color: #eeeeee;
@@ -115,6 +115,10 @@
 
 /* TITLE */
 .dashboard-container .item .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     text-align: start;
     margin-left: 2rem;
 }
@@ -144,6 +148,8 @@
     display: grid;
     position: relative;
     flex-grow: 1;
+
+    align-items: center;
 }
 
 .dashboard-container .item .description p {
@@ -185,14 +191,18 @@
 
 .dashboard-container .item .members .avatars {
     display: flex;
-    justify-content: center;
+
+    justify-content: start;
     align-items: center;
 
     gap: 0.6rem;
 }
 
 /* MENU */
-.dashboard-container .item .menu { display: flex; }
+.dashboard-container .item .menu {
+    display: flex;
+    align-items: center;
+}
 
 .dashboard-container .item .menu button {
     margin-inline-end: 2rem;
