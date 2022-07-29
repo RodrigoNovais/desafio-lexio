@@ -15,6 +15,9 @@ export type Agreement = {
 type DocumentProps = { document: Agreement }
 
 const Document: React.FC<DocumentProps> = ({ document }) => {
+    if (!document)
+        throw new Error('Document param must not be empty');
+
     return (
         <div className={DocumentCSS['item']}>
             <div className={DocumentCSS['title']}>
