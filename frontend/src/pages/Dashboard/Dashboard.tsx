@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import Avatar from '../../components/Avatar';
 import Badge, { Status } from '../../components/Badge';
 import Input from '../../components/Input';
 
@@ -61,8 +62,8 @@ const Dashboard: React.FC = () => {
                         <div className={DashboardCSS['members']}>
                             <p>Partes do contrato</p>
                             <div className={DashboardCSS['avatars']}>
-                                {['JS', 'MS', 'GS', 'CL', 'CL'].map(title => (
-                                    <div key={title} className={DashboardCSS['avatar']}>{title}</div>
+                                {['JS', 'MS', 'GS', 'CL', 'CL'].map(name => (
+                                    <Avatar key={name} name={name} />
                                 ))}
                             </div>
                         </div>

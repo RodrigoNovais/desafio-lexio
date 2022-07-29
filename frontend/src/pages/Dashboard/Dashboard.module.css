@@ -191,30 +191,6 @@
     gap: 0.6rem;
 }
 
-/* AVATAR */
-.dashboard-container .item .members .avatar {
-    background: #C4C4C4;
-    color: #000000;
-
-    font-weight: bold;
-    font-size: 1.2rem;
-    line-height: 2.2rem;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-
-    overflow: hidden;
-    -webkit-user-select: none;
-    user-select: none;
-
-    width: 3.2rem;
-    height: 3.2rem;
-
-    border-radius: 100%;
-}
-
 /* MENU */
 .dashboard-container .item .menu { display: flex; }
 
