@@ -36,3 +36,38 @@
 //   }
 // }
 
+Cypress.Commands.add('login', (email, password) => {
+    cy.request({
+        method: 'POST',
+        url: 'http://192.168.15.12:8000/login',
+        body: {
+            email,
+            password,
+        }
+    })
+    .then(({ body }) => {
+        window.localStorage.setItem('@auth:token', body['token'])
+        window.localStorage.setItem('@auth:user', JSON.stringify({ name: body['name'] }))
+    })
+});
+
+Cypress.Commands.add('logout', () => { cy.clearLocalStorage(); });
+
+declare global {
+    namespace Cypress {
+        interface Chainable {
+            /**
+             * Custom command to perform api login.
+             * @example cy.login('fake@email.com', 'fake-password')
+             */
+            login(email: string, password: string): Chainable<void>
+
+            /**
+             * Custom command to perform logout.
+             */
+            logout(): Chainable<void>
+        }
+    }
+}
+
+export {};
