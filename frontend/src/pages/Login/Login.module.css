@@ -11,8 +11,43 @@
 }
 
 .login-container .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 70rem;
     border-radius: 1.6rem;
-    height: calc(100vh - 8rem);
+
+    background-image: url('/assets/images/banner.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: currentcolor;
+}
+
+.login-container .banner h1 {
+    color: #FCFCFC;
+
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 8.6rem;
+    line-height: 6.5rem;
+
+    margin-top: 6.2rem;
+    margin-bottom: 4rem;
+}
+
+.login-container .banner h1 span { color: #FEAD00; }
+
+.login-container .banner p {
+    max-width: 40rem;
+
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3rem;
+
+    color: #FCFCFC;
 }
 
 .login-container fieldset {

@@ -45,7 +45,13 @@ const Login: React.FC = () => {
 
     return (
         <div className={LoginCSS['login-container']}>
-            <img className={LoginCSS['banner']} src='/assets/images/banner.png' />
+            <section className={LoginCSS['banner']}>
+                <h1>
+                    lex<span>io</span>
+                </h1>
+
+                <p>Criação e gestão de contratos de forma eficiente e descomplicada!</p>
+            </section>
 
             <form className={LoginCSS['container']} onSubmit={handleSubmit}>
                 <fieldset>
